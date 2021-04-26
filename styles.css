@@ -4,6 +4,7 @@ body, html {
     color: #cccccc;
     background-color: #495464;
     text-align: center;
+    scroll-behavior: smooth;
 }
   
 /* 
@@ -19,21 +20,69 @@ body, html {
   }
 */
   .main {
-    background-color: #232931;
+    margin-top: 30px;
+    background-color: #424446;
     left: 500px;
     padding: 15px;
     border-radius: 30px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .artwork{
-background-color: #232931;
+/*background-color: #232931;*/
 margin-top: 25px;
 padding: 15px;
 border-radius: 30px;
+width: 714px;
+margin-left: auto;
+margin-right: auto;
   }
 
   
 .link{
     color: #cccccc;
     font-size: large;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 5px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  margin-right: 30px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+li a:hover {
+  background-color: #111;
+}
+
+.footer{
+  display: inline-block;
+  float: none;
+  color: #fff;
+  font-size: 30px;
+  margin: 10px;
+  list-style-type: none;
+  border-radius: 30px;
+  margin-top: 5px;
 }
