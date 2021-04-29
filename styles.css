@@ -1,88 +1,237 @@
-body, html {
+html, body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100%;
-    color: #cccccc;
     background-color: #495464;
-    text-align: center;
-    scroll-behavior: smooth;
-}
-  
-/* 
-.parallax {
-    /* create the parallax image background
-    background-image: url("parallax.png");
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0;
-  }
-*/
-  .main {
-    margin-top: 30px;
-    background-color: #424446;
-    left: 500px;
-    padding: 15px;
+    scroll-behavior: smooth;
+    text-align: center;
+    color:#cccccc ;
+}
+h1{
+    grid-area: main1;
+}
+h3{
+    grid-area: main2;
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
     border-radius: 30px;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin-top: 5px;
+  }
+ .nav >li {
+    float: left;
+  }
+  
+  li a {
+    margin-right: 30px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 30px;
+  }
+  li a:hover {
+    background-color: #111;
+  }
+  
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .7fr 1fr .7fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "side1 main1 side2"
+    "side1 main2 side2"
+    "side1 main3 side2"
+    ;
 }
 
-.artwork{
-/*background-color: #232931;*/
-margin-top: 25px;
-padding: 15px;
-border-radius: 30px;
-width: 714px;
-margin-left: auto;
-margin-right: auto;
+/* CREDIT FOR THE HAMBURGER MENU TO ERIK TERWAN https://codepen.io/erikterwan */
+nav{
+    display: none;
+}
+ 
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 25px;
+   left: 10px;
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #d4d4d4;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   
+   cursor: pointer;
+   
+   opacity: 0;
+   z-index: 2; 
+   
+   -webkit-touch-callout: none;
+ }
+ 
+
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #d81313;
+ }
+
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 100px;
+   
+   background: #2d343d;
+   border-radius: 30px;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+  li {
+    padding: 1rem 0;
   }
+  
+  .menuLink {
+    display: inline;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menuLink:hover {
+    text-decoration: underline;
+  }
+nav-overall{
+    grid-area: nav;
+}
+
+.main1{
+grid-area: main1;
+}
+
+.main2{
+grid-area: main2;
+}
+.main3{
+    grid-area: main3;
+}
+.artwork > img{ 
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
 
   
-.link{
-    color: #cccccc;
-    font-size: large;
+@media only screen and (max-width: 1050px) {
+.wrapper{
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav nav"
+    "side1 main1 side2"
+    "side1 main2 side2"
+    "side1 main3 side2";
+
+}
+.nav{
+        display: none;
+}
+nav{
+    display: unset;
 }
 
-.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border-radius: 30px;
-  margin-top: 5px;
-}
 
-li {
-  float: left;
-}
-
-li a {
-  margin-right: 30px;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  border-radius: 30px;
-}
-li a:hover {
-  background-color: #111;
-}
-
-.footer{
-  display: inline-block;
-  float: none;
-  color: #fff;
-  font-size: 30px;
-  margin: 10px;
-  list-style-type: none;
-  border-radius: 30px;
-  margin-top: 5px;
 }
