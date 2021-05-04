@@ -5,6 +5,7 @@ html, body{
     scroll-behavior: smooth;
     text-align: center;
     color:#cccccc ;
+    overflow-x: hidden;
 }
 h1{
     grid-area: main1;
