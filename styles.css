@@ -1,8 +1,13 @@
-html,body{
-background-color: #232B2B;
-margin: 0;
-overflow-x: hidden;
-scroll-behavior: smooth;
+html{
+  --bg:#232B2B;
+}
+
+body{
+  background-color: var(--bg);
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  color: #388E8E;
 }
 
 .wrapper{
@@ -12,18 +17,21 @@ scroll-behavior: smooth;
 
 }
 
-.Nav{
+.imgbox{
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 1000px;
 }
 
 .Media{
 	text-align: center;
-	color: white;
 }
 .main1{
 	height: 500px;
 }
 .Footer{
-	padding-top: 5px;
+  padding-top: 5px;
 	text-align: center;
 }
 
@@ -33,11 +41,11 @@ scroll-behavior: smooth;
 }
 
 .Footer  i {
-	color: white;
+  color: #388E8E;
 }
 
 .Footer i:hover {
-color: #8B008B;
+color: #C18DBA ;
 }
 
 
@@ -47,8 +55,73 @@ img{
 }
 
 
+/*Light theme toggle*/
+
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {  
+  background-color: green;
+}
+
+input:checked + label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+/* Image perspective css */
+#container {
+  perspective: 50px;
+}
+
+#inner {
+  background-color:rgba(37, 116, 169, .15); 
+  border-radius: 15px;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+
+
 /* CREDIT FOR THE HAMBURGER MENU TO ERIK TERWAN https://codepen.io/erikterwan */
  
+#menu h1 {
+  color: #d4d4d4;
+}
+
  #menuToggle
  {
    display: block;
@@ -102,7 +175,7 @@ img{
    margin-bottom: 5px;
    position: relative;
    
-   background: #cdcdcd;
+   background: #388E8E;
    border-radius: 3px;
    
    z-index: 1;
@@ -186,7 +259,8 @@ img{
     text-decoration: underline;
   }
 
-  @media only screen and (max-width: 1050px) {
+  
+@media only screen and (max-width: 1050px) {
 	
 	.Footer > span {
 	font-size: 40px;
@@ -194,3 +268,12 @@ img{
 }
 
   }
+
+@media only screen and (max-width: 750px) {
+.imgbox{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+}
+}
