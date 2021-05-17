@@ -1,5 +1,5 @@
 html{
-  --bg:#232B2B;
+  --bg: black;
 }
 
 body{
@@ -7,7 +7,7 @@ body{
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  color: #388E8E;
+  color: slateblue;
 }
 
 .wrapper{
@@ -27,6 +27,21 @@ body{
 .Media{
 	text-align: center;
 }
+.Media ul{
+  list-style: none;
+  font-size: 50px;
+}
+.Media a{
+  text-decoration: none;
+  color: slateblue;
+  font-style: italic;
+}
+.Media a:hover {
+  color: orange;
+}
+
+
+
 .main1{
 	height: 500px;
 }
@@ -41,7 +56,7 @@ body{
 }
 
 .Footer  i {
-  color: #388E8E;
+  color: slateblue;
 }
 
 .Footer i:hover {
@@ -107,7 +122,7 @@ label:active:after {
 }
 
 #inner {
-  background-color:rgba(37, 116, 169, .15); 
+  background-color:rgba(25, 25, 25, .5); 
   border-radius: 15px;
   transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
@@ -119,7 +134,7 @@ label:active:after {
 /* CREDIT FOR THE HAMBURGER MENU TO ERIK TERWAN https://codepen.io/erikterwan */
  
 #menu h1 {
-  color: #d4d4d4;
+  color: slateblue;
 }
 
  #menuToggle
@@ -138,7 +153,7 @@ label:active:after {
  #menuToggle a
  {
    text-decoration: none;
-   color: #d4d4d4;
+   color: slateblue;
    
    transition: color 0.3s ease;
  }
@@ -146,6 +161,9 @@ label:active:after {
  #menuToggle a:hover
  {
    color: tomato;
+ }
+ #menuToggle .current{
+  color: gold;
  }
  
  
@@ -259,7 +277,6 @@ label:active:after {
     text-decoration: underline;
   }
 
-  
 @media only screen and (max-width: 1050px) {
 	
 	.Footer > span {
