@@ -116,18 +116,10 @@ label:active:after {
   width: 45px;
 }
 
-/* Image perspective css */
-#container {
-  perspective: 50px;
-}
 
 #inner {
   background-color:rgba(25, 25, 25, .5); 
   border-radius: 15px;
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  -o-transition: transform 0.5s;
 }
 
 
