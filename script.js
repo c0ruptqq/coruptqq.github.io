@@ -10,10 +10,19 @@ const getStyle = (element, style) =>
 
 const initialColors = {
   bg: getStyle(html, "--bg"),
+  color: getStyle(html, "--color"),
+  hbg: getStyle(html, "--hbg"),
+  ftr: getStyle(html, "--ftr"),
+  stroke: getStyle(html, "--stroke-color"),
 }
 
 const darkMode = {
   bg: "#F5FFFA", // override styles here
+  color: "#37474f",
+  hbg: "#37474f",
+  ftr: "#37474f",
+  stroke: "#37474f",
+
 }
 
 const transformKey = key => 

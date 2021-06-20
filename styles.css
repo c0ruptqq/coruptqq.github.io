@@ -1,5 +1,11 @@
 html{
-  --bg: black;
+  --bg: #222222;
+  --color: #dee4e7;
+  --hbg: #dee4e7;
+  --ftr: #dee4e7;
+  --ftr-hover: #FF7F7F;
+  --menu-hover: #FF7F7F;
+  --stroke: #dee4e7;
 }
 
 body{
@@ -7,7 +13,7 @@ body{
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  color: slateblue;
+  color: var(--color);
 }
 
 .wrapper{
@@ -23,6 +29,43 @@ body{
   width: 700px;
   height: 1000px;
 }
+
+.Media h2 {
+  color: var(--bg);
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 1.4;
+  overflow: hidden;
+  -webkit-text-stroke: 2px var(--stroke);
+}
+
+.Media h1 {
+  color: var(--bg);
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 1.4;
+  overflow: hidden;
+  -webkit-text-stroke: 3px var(--stroke);
+}
+
+.Media h1:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100;
+  left: 100;
+  width: 0;
+  overflow: hidden;
+  color: var(--stroke);
+  white-space: nowrap;
+  transition-duration: 1s;
+} 
+.Media h1:hover:before{
+  width: 100%;
+} 
 
 .Media{
 	text-align: center;
@@ -56,11 +99,11 @@ body{
 }
 
 .Footer  i {
-  color: slateblue;
+  color: var(--ftr);
 }
 
 .Footer i:hover {
-color: #C18DBA ;
+color: var(--ftr-hover);
 }
 
 
@@ -145,14 +188,14 @@ label:active:after {
  #menuToggle a
  {
    text-decoration: none;
-   color: slateblue;
+   color: #dee4e7;
    
    transition: color 0.3s ease;
  }
  
  #menuToggle a:hover
  {
-   color: tomato;
+   color: var(--menu-hover);
  }
  #menuToggle .current{
   color: gold;
@@ -185,7 +228,7 @@ label:active:after {
    margin-bottom: 5px;
    position: relative;
    
-   background: #388E8E;
+   background: var(--hbg);
    border-radius: 3px;
    
    z-index: 1;
@@ -276,6 +319,12 @@ label:active:after {
 	padding-right: none;
 }
 
+.Media h1:hover:before{
+  width: 0;
+} 
+.Media h2 {
+  font-size: 50px;
+}
   }
 
 @media only screen and (max-width: 750px) {
