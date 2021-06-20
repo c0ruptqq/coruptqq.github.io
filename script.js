@@ -66,3 +66,6 @@ if (getValeuLocalStorage("mode") === "initialColors") {
   changeColors(darkMode);
 }
 
+$(window).on("load",function(){
+  $(".loader-wrapper").fadeOut("slow");
+});
