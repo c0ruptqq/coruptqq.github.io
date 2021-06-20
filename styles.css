@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
 html{
   --bg: #222222;
   --color: #dee4e7;
@@ -9,6 +11,7 @@ html{
 }
 
 body{
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: var(--bg);
   margin: 0;
   overflow-x: hidden;
@@ -319,9 +322,7 @@ label:active:after {
 	padding-right: none;
 }
 
-.Media h1:hover:before{
-  width: 0;
-} 
+
 .Media h2 {
   font-size: 50px;
 }
@@ -334,4 +335,7 @@ label:active:after {
   width: auto;
   height: auto;
 }
+.Media h1:hover:before{
+  width: 0;
+} 
 }
