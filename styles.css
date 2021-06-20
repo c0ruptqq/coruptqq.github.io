@@ -8,6 +8,7 @@ html{
   --ftr-hover: #FF7F7F;
   --menu-hover: #FF7F7F;
   --stroke: #dee4e7;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -15,28 +16,27 @@ body{
   background-color: var(--bg);
   margin: 0;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+
   color: var(--color);
 }
+
+
+
+
+
 
 .wrapper{
 	height: 100vh;
 	display: grid;
 	grid-template-rows: 50px auto 50px;
+  text-align: center;
 
 }
 
-.imgbox{
-  margin-left: auto;
-  margin-right: auto;
-  width: 700px;
-  height: 1000px;
-}
 
 .Media h2 {
   color: var(--bg);
-  position: relative;
-  display: inline-block;
+text-align: center;
   font-weight: bold;
   font-size: 70px;
   line-height: 1.4;
@@ -70,26 +70,19 @@ body{
   width: 100%;
 } 
 
-.Media{
+.Media .main1{
 	text-align: center;
 }
 .Media ul{
   list-style: none;
   font-size: 50px;
 }
-.Media a{
-  text-decoration: none;
-  color: slateblue;
-  font-style: italic;
-}
-.Media a:hover {
-  color: orange;
-}
+
 
 
 
 .main1{
-	height: 500px;
+	height: 100vh;
 }
 .Footer{
   padding-top: 5px;
@@ -113,6 +106,23 @@ color: var(--ftr-hover);
 img{
 	max-width: 100%;
 	height: auto;
+  border-radius: 5%;
+}
+.button {
+  width: 100px;
+  margin: 0 auto;
+  color: #fff ;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #60a3bc;
+	padding: 20px;
+	border-radius: 50px;
+	display: block;
+	border: none;
+	transition: all 0.4s ease 0s;
+}
+.Media a:hover {
+  background: #d69090;
 }
 
 
@@ -163,10 +173,7 @@ label:active:after {
 }
 
 
-#inner {
-  background-color:rgba(25, 25, 25, .5); 
-  border-radius: 15px;
-}
+
 
 
 /* CREDIT FOR THE HAMBURGER MENU TO ERIK TERWAN https://codepen.io/erikterwan */
@@ -179,6 +186,7 @@ label:active:after {
  {
    display: block;
    position: relative;
+   position: fixed;
    top: 15px;
    left: 10px;
    
@@ -328,6 +336,7 @@ label:active:after {
 }
   }
 
+  
 @media only screen and (max-width: 750px) {
 .imgbox{
   margin-left: auto;
