@@ -22,6 +22,11 @@ body{
   color: var(--color);
 }
 
+.loading {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
 .wrapper{
   text-align: center;
 }
@@ -49,7 +54,6 @@ body{
 }
 
 /* NAV */
-/* CREDIT FOR THE HAMBURGER MENU TO ERIK TERWAN https://codepen.io/erikterwan */
  
 #menu h1 {
   color: slateblue;
@@ -288,24 +292,15 @@ img{
 }
 .combo:hover{
     transform: scale(1.1);
+    color: var(--ftr-hover)
 }
 .combo:hover , .combo:hover .icon{
     color:white;
+
 }
-.ig:hover , .ig:hover .circle{
-    color:#e91e63;
-}
-.fb:hover , .fb:hover .circle{
-    color:#2196f3;
-}
-.yt:hover , .yt:hover .circle{
-    color:#f44336;
-}
-.tw:hover , .tw:hover .circle{
-    color:#2196f3;
-}
-.gt:hover , .gt:hover .circle{
-    color: #1f1f1f;
+.combo:hover , .combo:hover .circle{
+    color:var(--ftr-hover);
+
 }
 
 

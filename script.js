@@ -66,9 +66,6 @@ if (getValeuLocalStorage("mode") === "initialColors") {
   changeColors(darkMode);
 }
 
-$(window).on("load",function(){
-  $(".loader-wrapper").fadeOut("slow");
-});
 
 //scroll to top button
 
@@ -90,3 +87,10 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Loader function
+$(window).on("load",function(){
+  $(".loader-wrapper").fadeOut("slow", function(){
+      $('body').removeClass('loading');
+  });
+});
