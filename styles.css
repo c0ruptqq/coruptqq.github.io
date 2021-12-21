@@ -21,7 +21,9 @@ body{
   flex-direction:column; 
   color: var(--color);
 }
-
+#button_down{
+  font-size:200%;
+}
 .loading {
   overflow-y: hidden;
   height: 100vh;
