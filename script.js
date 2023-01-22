@@ -10,6 +10,7 @@ const getStyle = (element, style) =>
 
 const initialColors = {
   bg: getStyle(html, "--bg"),
+  bgtemp: getStyle(html, "--bgtemp"),
   color: getStyle(html, "--color"),
   hbg: getStyle(html, "--hbg"),
   ftr: getStyle(html, "--ftr"),
@@ -18,6 +19,7 @@ const initialColors = {
 
 const darkMode = {
   bg: "#F5FFFA", // override styles here
+  bgtemp: "#F5FFFAb0",
   color: "#37474f",
   hbg: "#37474f",
   ftr: "#37474f",
